@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/pal-tracker.iml" filepath="$PROJECT_DIR$/.idea/pal-tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pal-tracker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pal-tracker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pal-tracker.test.iml" filepath="$PROJECT_DIR$/.idea/modules/pal-tracker.test.iml" />
     </modules>
   </component>
 </project>
