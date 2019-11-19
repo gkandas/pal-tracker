@@ -21,15 +21,17 @@ jobs:
         - git tag -f $RELEASE_TAG
       deploy:
         provider: releases
-        api_key: $GITHUB_OAUTH_TOKEN
+        api_key: "8d7b24bdcf823f03ab826504789175e6d1406974"
         file: "build/libs/pal-tracker.jar"
         skip_cleanup: true
     - stage: deploy to cf
       language: bash
       script:
+        - export RELEASE_TAG="release-$TRAVIS_BUILD_NUMBER"
         - echo "Downloading $RELEASE_TAG"
         - wget -P build/libs https://github.com/$GITHUB_USERNAME/pal-tracker/releases/download/$RELEASE_TAG/pal-tracker.jar
       before_deploy:
+        - export RELEASE_TAG="release-$TRAVIS_BUILD_NUMBER"
         - echo "Deploying $RELEASE_TAG to Cloud Foundry"
       deploy:
         provider: cloudfoundry
