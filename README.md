@@ -1,2 +1,2 @@
 # pal-tracker
-CND Training
+CND Training for Structured Monolith
