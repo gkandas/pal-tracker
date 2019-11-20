@@ -10,13 +10,9 @@ jobs:
   include:
     - stage: build and publish
       language: java
-<<<<<<< HEAD
       jdk: openjdk8
-=======
-      jdk: openjdk11
       addons:
         mariadb: '10.2'
->>>>>>> d921f90... Add task for migrating databases
       install: skip
       before_script:
         - mysql -uroot < databases/tracker/create_databases.sql
@@ -56,7 +52,7 @@ jobs:
       deploy:
         provider: cloudfoundry
         api: $CF_API_URL
-        username: $CF_USERNAME
+        username: $CF_USERNAMEgit
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: $CF_SPACE
